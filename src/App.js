@@ -23,14 +23,12 @@ function App() {
 
       spotify.getMe().then((user)=>{
         dispatch({
-          type : "SET_USER",
+          type : 'SET_USER',
           user : user,
         });
       })
     }
   },[]);
-
-  console.log(user);
 
   return (
     <div className="App">
