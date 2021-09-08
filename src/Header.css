@@ -21,6 +21,10 @@
     outline: none;
 }
 
+.header-search{
+    margin: 0px 10px;
+}
+
 .header_right{
     display: flex;
     align-items: center;

@@ -33,7 +33,7 @@ function App() {
           playlists: playlists,
         })
       })
-      spotify.getPlaylist("37i9dQZF1DWVDCraF986xg").then((response)=>{
+      spotify.getPlaylist("37i9dQZEVXcIazxmbLIbQX").then((response)=>{
         dispatch({
           type : "SET_DISCOVER_WEEKLY",
           discover_weekly : response,

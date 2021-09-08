@@ -10,8 +10,6 @@ const Sidebar = () => {
 
     const [{ playlists },dispatch] = useDataLayerValue();
 
-    console.log(playlists);
-
     return (
         <div className="sidebar">
             <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" className="sidebar-logo" alt="sidebar-icon"/> 

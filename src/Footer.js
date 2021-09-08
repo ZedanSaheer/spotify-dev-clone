@@ -8,8 +8,13 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import { Grid, Slider } from "@material-ui/core";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay"
 import VolumeDownIcon from "@material-ui/icons/VolumeDown"
+import SpotifyPlayer from "react-spotify-web-playback"
+import { useDataLayerValue } from './DataLayer';
 
 const Footer = () => {
+
+    const [{token} , dispatch] = useDataLayerValue();
+
     return (
         <div className="footer">
             <div className="footer_left">
@@ -20,12 +25,14 @@ const Footer = () => {
                </div>
             </div>
             <div className="footer_center">
-                <ShuffleIcon className="footer_green" />
+             {/*    <ShuffleIcon className="footer_green" />
                 <SkipPreviousIcon className="footer_icon" />
                 <PlayCircleOutlineIcon fontSize="large" className="footer_icon" />
                 <SkipNextIcon className="footer_icon" />
-                <RepeatIcon className="footer_green" />
+                <RepeatIcon className="footer_green" /> */}
+                 <SpotifyPlayer token={token}/>
             </div>
+           
             <div className="footer_right">
                 <Grid container spacing={2}>
                     <Grid item>

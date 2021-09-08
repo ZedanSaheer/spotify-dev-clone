@@ -15,6 +15,7 @@
 }
 .songRow_info > h1{
     font-size: 16px;
+    text-transform: capitalize;
 }
 .songRow_info > p {
     font-size: 14px;
