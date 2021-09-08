@@ -28,9 +28,40 @@
 .header_right{
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    position: relative;
+    user-select: none;
 }
 
 .header_right > h4{
     margin-left: 10px;
+}
+.signout{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background: #111 ;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.8);
+}
+.signout > p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: gray;
+}
+.signout > p:hover {
+    color: white;
+}
+.signout > p > span {
+    margin: 0px 5px;
+    text-transform: capitalize;
 }

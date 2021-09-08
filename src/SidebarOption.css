@@ -9,6 +9,15 @@
     padding: 0px 15px;
 }
 
+.sidebar_option >p >a{
+    text-decoration: none;
+    color: gray;
+}
+
+.sidebar_option >p >a:hover{
+    color: white;
+}
+
 .sidebar_option:hover{
     color: white;
 }

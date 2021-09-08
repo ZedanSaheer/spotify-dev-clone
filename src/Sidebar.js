@@ -21,7 +21,7 @@ const Sidebar = () => {
              <hr />
 
             {playlists?.items?.map((playlist)=>(
-                <SidebarOption title={playlist.name} />
+                <SidebarOption title={playlist.name} url={playlist.external_urls.spotify}/>
             ))}
         </div>
       
