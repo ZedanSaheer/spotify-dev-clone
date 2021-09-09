@@ -34,11 +34,15 @@
     margin: 0;
     padding: 0;
     font-size: 12px;
+    text-transform: capitalize;
+    text-align: center;
 }
 .footer_left-song-info > h4{
     margin: 0;
     padding: 0;
     margin-bottom: 5px;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .footer_center{

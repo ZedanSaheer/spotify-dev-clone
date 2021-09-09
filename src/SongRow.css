@@ -21,6 +21,7 @@
     font-size: 14px;
     margin-top: 3px;
     color: gray;
+    text-transform: capitalize;
 }
 .songRow_logo{
     width: 40px;

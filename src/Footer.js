@@ -16,8 +16,6 @@ const Footer = () => {
 
     const [{item} , dispatch ] = useDataLayerValue();
 
-    console.log(item?.name?.slice(0,14));
-
     const [play , setPlay] = useState(false);
 
     const togglePlay = () => {
