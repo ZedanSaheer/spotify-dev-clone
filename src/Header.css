@@ -32,6 +32,9 @@
     cursor: pointer;
     position: relative;
     user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0px 15px;
+    border-radius: 33px;
 }
 
 .header_right > h4{

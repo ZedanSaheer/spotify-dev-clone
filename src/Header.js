@@ -4,7 +4,8 @@ import SearchIcon from "@material-ui/icons/Search"
 import { Avatar } from '@material-ui/core'
 import { useDataLayerValue } from './DataLayer'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 
 const Header = () => {
@@ -26,6 +27,7 @@ const Header = () => {
             <div className="header_right" onClick={toggleExit}>
                 <Avatar src={user?.images[0]?.url} alt={user?.display_name}/>
                 <h4>{user?.display_name}</h4>
+                {signout ? <ExpandLessIcon /> : <ExpandMoreIcon/>}
                 {signout ? (<div className="signout" onClick={()=>{
                     window.location.replace('/')
                 }}>
