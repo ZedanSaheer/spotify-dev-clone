@@ -32,8 +32,8 @@ const Footer = () => {
             <div className="footer_left">
                <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/TwilightCoverDrive.jpg" alt="random" className="footer_left-song-cover"/>
                <div className="footer_left-song-info">
-               <h4>Untitled{item?.name?.slice(0,14)}</h4>
-                <p>Untitled{item?.artists?.slice(0,1).map((artist)=>(
+               <h4>{!item && "Untitled"}{item?.name?.slice(0,14)}</h4>
+                <p>{!item && "Untitled"}{item?.artists?.slice(0,1).map((artist)=>(
                     <small>{artist.name}</small>
                 ))}</p>
                </div>

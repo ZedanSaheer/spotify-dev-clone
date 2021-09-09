@@ -1,5 +1,5 @@
 export const authEndPoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "https://spotify-by-zedan.web.app/callback/";
+const redirectUri = "http://localhost:3000/";
 const clientId = "77c0635842554359a19a031d1ad23b18";
 
 const scopes = ["user-read-recently-played","user-read-currently-playing","user-read-playback-state","user-top-read","user-modify-playback-state","user-read-email","user-read-private","streaming"];

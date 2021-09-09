@@ -1,21 +1,35 @@
 import PlayCircleFilledWhite from '@material-ui/icons/PlayCircleFilledWhite'
-import FavoriteIcon from '@material-ui/icons/FavoriteBorderOutlined'
+import FavoriteIconOutlined from '@material-ui/icons/FavoriteBorderOutlined'
+import FavouriteIcon from '@material-ui/icons/Favorite'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
-import React from 'react'
+import React,{useState} from 'react'
 import "./Body.css"
 import { useDataLayerValue } from './DataLayer'
 import SongRow from './SongRow'
 import Header from './Header'
+import PauseCircleFilledOutlined from '@material-ui/icons/PauseCircleFilledOutlined'
 
 const Body = ({ spotify }) => {
 
     const [{ discover_weekly }, dispatch] = useDataLayerValue();
 
+    const [Button, setButton] = useState(false)
+
+    const changeButton = () =>{
+        Button ? setButton(false) : setButton(true)
+    }
+
+    const [Play, setPlay] = useState(false);
+
+    const changePlay = () =>{
+        Play ? setPlay(false) : setPlay(true)
+    }
+
     return (
         <div className="body">
             <Header />
             <div className="body_info">
-                <img src={discover_weekly?.images[0].url} alt="weekly" />
+                <img src="https://www.hypebot.com/wp-content/uploads/2020/07/discover-weekly.png" alt="weekly" />
                 <div className="body_info-text">
                     <strong>PLAYLIST</strong>
                     <h2>Discover Weekly</h2>
@@ -24,12 +38,12 @@ const Body = ({ spotify }) => {
             </div>
             <div className="body_songs">
                 <div className="body_icons">
-                    <PlayCircleFilledWhite className="body_shuffle"/>
-                    <FavoriteIcon className="body_icon" />
+                    {Play ? <PlayCircleFilledWhite className="body_shuffle" onClick={changePlay}/> : <PauseCircleFilledOutlined className="body_shuffle" onClick={changePlay}/>}
+                    {Button ? <FavoriteIconOutlined className="body_icon" onClick={changeButton}/>:<FavouriteIcon className="body_icon" onClick={changeButton}/>}
                     <MoreHorizIcon className="body_icon" />
                 </div>
-                {discover_weekly?.tracks.items.map((item)=>{
-                   return <SongRow track={item.track}/>
+                {discover_weekly?.items.map((item)=>{
+                   return <SongRow track={item}/>
                 })}
             </div>
 

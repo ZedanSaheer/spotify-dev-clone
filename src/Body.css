@@ -3,6 +3,7 @@
     background:linear-gradient(to bottom ,rgb(91,87,115) , rgba(0,0,0,1));
     color: white;
     padding: 30px;
+    min-height: 100vh;
 }
 .body_info{
     display: flex;
